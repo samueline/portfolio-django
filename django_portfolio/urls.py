@@ -24,6 +24,9 @@ from portfolio import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path( '', views.home, name='home' ),
+    path( 'contact', views.post, name='contact' ),
+    # path( 'contact', views.post, name='contact' ),
+
     # path( 'blog/', render_posts),
     # path( 'blog/post/<int:post_id>', m.post_detail)
 ]

@@ -1,0 +1,14 @@
+{%load static%}
+<div class="row  bg-black">
+   <br>
+   <!-- {{ form }} -->
+   <form action="contact" method="POST" style="background-color: rgb(1, 1, 1);">
+       {% csrf_token %}
+       <!-- {{ form }} -->
+       <h4 style="margin-left:43%;">Contact me</h4>
+       <input type="text" id="user" name="user" style="margin-left:43%;" placeholder="Name" ><br>
+       <input type="email"id="email" name="email" style="margin-left:43%;margin-top: 2px;" placeholder="Email"><br>
+       <textarea type="text" placeholder="Message" id="descripcion" cols="23" name="descripcion"style="margin-left:43%;margin-top: 2px;" ></textarea><br>
+       <button type="submit" value="submit" class="btn btn-primary" style="margin-left:44%;margin-top: 2px;">Send</button>
+   </form>
+</div>

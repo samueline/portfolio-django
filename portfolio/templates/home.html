@@ -5,32 +5,70 @@
 
 {%load static%}
 
-<header class="row bg-black">
-    <div class="col-md-4">
+<style>
+    span{
+        display: block;
+        white-space: nowrap;
+        border-right: 4px solid ;
+        width: 28ch;
+        animation: typing 1.5s steps(12),blink .5s infinite step-end alternate;
+        overflow: hidden;
+    }
 
-        <img src="" alt="">
+    @keyframes typing {
+        from{ width: 0;}
+    }
 
-    </div>
-    <div class="col-md-8 my-auto">
-        <h1>  I am <strong>Samuel Reyes</strong>   </h1>
-        <h3> I am a FullStack developer</h3>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat facilis dignissimos quibusdam suscipit quae repellat! Tenetur ipsam dignissimos doloremque repellat nobis asperiores esse culpa, maiores officia quod autem perspiciatis excepturi quisquam accusantium alias assumenda placeat veritatis illum! Impedit
+
+
+</style>
+<header class="row" style="background-color: rgba(12, 12, 12, 0.747);">
+
+    <div class="col-md-6">
+<!-- foto mia -->
+        <!-- <img src="../static/low-poly-grid-haikei.png" alt="" width="400" 
+        height="300"> -->
+        <h2>  I am <strong>Samuel Reyes</strong>, a fullstack developer  </h2>
+        <h3></h3>
+       
+        <p>
+             Soy un desarrollador fullstack con pasion por la tecnologia, trabajo con angular, laravel django flask y fast api, 
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat facilis dignissimos quibusdam suscipit quae repellat! Tenetur ipsam dignissimos doloremque repellat nobis asperiores esse culpa, maiores officia quod autem perspiciatis excepturi quisquam accusantium alias assumenda placeat veritatis illum! Impedit
              laborum ex consequuntur molestiae unde nisi repellendus, culpa repellat totam ullam sapiente!</p>
         <a href="{% static 'portfolio/cv.pdf'%}" class="btn colorButton btn-l rounded-1 my-3">Download</a>
+           
     </div>
+    
+    
+    <!-- <div class="col-md-8 my-auto" >
+       
+    </div> -->
+    <div class="col-md-2 my-auto" >
+        <img src="../static/low-poly-grid-haikeiok.png" alt="" width="545" 
+        height="615">
+    
+    
+    </div>
+
 </header>
 
 
 <div class="row my-4 text-center">
+
+    
+
     <h3>My Projects</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, eveniet.</p>
+    <p>Conozca lo que hago.</p>
+
+    
     {% for project in projects %}
 
+
     <div class="col-md-6 p-4">
-        <div class="card bg-black card-project">
+        <div class="card bg-black card-project ">
             <img src="{{project.image.url}}" alt="" class="card-img-top">
 
-            <div class="card-body">
+            <div class="card-body ">
 
                 <h2>{{project.title}}</h2>
                 <p>{{project.descripcion}}</p>
@@ -45,9 +83,12 @@
 
     
     {%endfor%}
+    
     {% endblock %}
 
 
 </div>
 
+<div class="bg-black">
 
+</div>
